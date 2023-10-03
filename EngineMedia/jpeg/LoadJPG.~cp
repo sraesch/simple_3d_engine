@@ -1,0 +1,83 @@
+//---------------------------------------------------------------------------
+#include "LoadJPG.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include "jpeglib.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+
+void DecodeJPG(jpeg_decompress_struct* cinfo,ENJPGDATA *pic)
+{
+	// Read in the header of the jpeg file
+	jpeg_read_header(cinfo, TRUE);
+
+	// Start to decompress the jpeg file with our compression info
+	jpeg_start_decompress(cinfo);
+
+	// Get the image dimensions and channels to read in the pixel data
+	pic->BPP = cinfo->num_components;
+	pic->w   = cinfo->image_width;
+	pic->h   = cinfo->image_height;
+
+	// Get the row span in bytes for each row
+	int rowSpan = cinfo->image_width * cinfo->num_components;
+
+	// Allocate memory for the pixel buffer
+	pic->Data = ((unsigned char*)malloc(sizeof(unsigned char)*rowSpan*pic->h));
+
+	// Create an array of row pointers
+	unsigned char** rowPtr = new unsigned char*[pic->h];
+
+	for (int i = 0; i < pic->h; i++)
+		rowPtr[i] = &(pic->Data[i * rowSpan]);
+
+	// Now comes the juice of our work, here we extract all the pixel data
+	int rowsRead = 0;
+	while (cinfo->output_scanline < cinfo->output_height) 
+	{
+		// Read in the current row of pixels and increase the rowsRead count
+		rowsRead += jpeg_read_scanlines(cinfo, 
+										&rowPtr[rowsRead], cinfo->output_height - rowsRead);
+	}
+	
+	// Delete the temporary row pointers
+	delete [] rowPtr;
+
+	// Finish decompressing the data
+	jpeg_finish_decompress(cinfo);
+}
+
+ENbool ENLoadJPG(ENJPGDATA *pic,char *FileName)
+{
+	struct jpeg_decompress_struct cinfo;
+	FILE *pFile;
+		
+	// Open a file pointer to the jpeg file and check if it was found and opened 
+	if((pFile = fopen(FileName, "rb")) == NULL) 
+		return false;
+	
+	// Create an error handler
+	jpeg_error_mgr jerr;
+
+	// Have our compression info object point to the error handler address
+	cinfo.err = jpeg_std_error(&jerr);
+	
+	// Initialize the decompression object
+	jpeg_create_decompress(&cinfo);
+	
+	// Specify the data source (Our file pointer)	
+	jpeg_stdio_src(&cinfo, pFile);
+	
+	// Decode the jpeg file and fill in the image data structure to pass back
+	DecodeJPG(&cinfo, pic);
+	
+	// This releases all the stored memory for reading and decoding the jpeg
+	jpeg_destroy_decompress(&cinfo);
+	
+	// Close the file pointer that opened the file
+	fclose(pFile);
+
+	// Return the jpeg data (remember, you must ENFreeMemory this data after you are done)
+	return true;
+}
+

@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="&quot;G:\Current Engine\Runtimes\MaterialEditor.exe&quot;"/>
+    <OBJFILES value="MaterialEditor.obj main.obj MaterialData.obj &quot;C:\Dokumente und Einstellungen\Me\Eigene Dateien\C++\WINAPILoadBmp\About.obj&quot;"/>
+    <RESFILES value="MaterialEditor.res"/>
+    <IDLFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) main.dfm &quot;C:\Dokumente und Einstellungen\Me\Eigene Dateien\C++\WINAPILoadBmp\About.dfm&quot;"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value="rtl.lib vcl.lib"/>
+    <PACKAGES value="rtl.bpi vcl.bpi vclx.bpi vcljpg.bpi bcbsmp.bpi dclocx.bpi"/>
+    <PATHCPP value=".;&quot;C:\Dokumente und Einstellungen\Me\Eigene Dateien\C++\WINAPILoadBmp&quot;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value=""/>
+    <SYSDEFINES value="_RTLDLL;NO_STRICT;USEPACKAGES"/>
+    <MAINSOURCE value="MaterialEditor.cpp"/>
+    <INCLUDEPATH value="&quot;C:\Dokumente und Einstellungen\Me\Eigene Dateien\C++\WINAPILoadBmp&quot;;C:\Programme\Borland\CBuilder4\Projects;$(BCB)\include;$(BCB)\include\vcl;..\EngineSystem;..\EngineMedia"/>
+    <LIBPATH value="&quot;C:\Dokumente und Einstellungen\Me\Eigene Dateien\C++\WINAPILoadBmp&quot;;C:\Programme\Borland\CBuilder4\Projects;$(BCB)\lib\obj;$(BCB)\lib;..\Runtimes"/>
+    <WARNINGS value="-w-par -w-8027 -w-8026"/>
+    <WARNOPTSTR value=""/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <CFLAG1 value="-Od -H=g:\PROGRA~1\borland\CBUILD~1\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 
+      -b- -k -y -v -vi- -c -tW -tWM"/>
+    <PFLAGS value="-$YD -$W -$O- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpe -x -Gn -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj $(PACKAGES) Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="MaterialEditor.cpp" FORMNAME="" UNITNAME="MaterialEditor" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="MaterialEditor.res" FORMNAME="" UNITNAME="MaterialEditor" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="main.cpp" FORMNAME="ENMainWnd" UNITNAME="main" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="MaterialData.cpp" FORMNAME="" UNITNAME="MaterialData" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="C:\Dokumente und Einstellungen\Me\Eigene Dateien\C++\WINAPILoadBmp\About.cpp" FORMNAME="AboutWnd" UNITNAME="About" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1031
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=5
+Item0=C:\Dokumente und Einstellungen\Me\Eigene Dateien\C++\WINAPILoadBmp;C:\Dokumente und Einstellungen\Me\Eigene Dateien\C++\WINAPILoadBmp\;C:\Programme\Borland\CBuilder4\Projects\;$(BCB)\include;$(BCB)\include\vcl;..\EngineSystem;..\EngineMedia
+Item1=C:\Dokumente und Einstellungen\Me\Eigene Dateien\C++\WINAPILoadBmp;C:\Programme\Borland\CBuilder4\Projects;C:\Programme\Borland\CBuilder4\Projects\;$(BCB)\include;$(BCB)\include\vcl;..\EngineSystem;..\EngineMedia
+Item2=C:\Programme\Borland\CBuilder4\Projects\;$(BCB)\include;$(BCB)\include\vcl;..\EngineSystem;..\EngineMedia
+Item3=C:\Programme\Borland\CBuilder4\Projects;$(BCB)\include;$(BCB)\include\vcl;..\EngineSystem;..\EngineMedia
+Item4=$(BCB)\include;$(BCB)\include\vcl;..\EngineSystem\;..\EngineMedia[HistoryLists\hlLibraryPath]
+
+[HistoryLists\hlLibraryPath]
+Count=4
+Item0=C:\Dokumente und Einstellungen\Me\Eigene Dateien\C++\WINAPILoadBmp;C:\Dokumente und Einstellungen\Me\Eigene Dateien\C++\WINAPILoadBmp\;C:\Programme\Borland\CBuilder4\Projects\;$(BCB)\lib\obj;$(BCB)\lib;..\Runtimes
+Item1=C:\Dokumente und Einstellungen\Me\Eigene Dateien\C++\WINAPILoadBmp;C:\Programme\Borland\CBuilder4\Projects;C:\Programme\Borland\CBuilder4\Projects\;$(BCB)\lib\obj;$(BCB)\lib;..\Runtimes
+Item2=C:\Programme\Borland\CBuilder4\Projects\;$(BCB)\lib\obj;$(BCB)\lib;..\Runtimes
+Item3=C:\Programme\Borland\CBuilder4\Projects;$(BCB)\lib\obj;$(BCB)\lib;..\Runtimes
+
+[HistoryLists\hlFinalOutputDir]
+Count=18
+Item0=G:\Current Engine\Runtimes
+Item1=..\Runtimes\
+Item2=..\RuntimesItem1=..\RuntimesItem1=..\RuntimesItem1=../Runtimes/
+Item3=
+Item4=
+Item5=
+Item6=..\RuntimesItem1=..\RuntimesItem1=..\RuntimesItem1=..\RuntimesItem1=..\RuntimesItem1=..\RuntimesItem1=..\RuntimesItem1=..\RuntimesItem1=..\RuntimesItem1=..\RuntimesItem1=..\RuntimesItem1=..\Runtimes[Debugging]
+Item7=
+Item8=
+Item9=
+Item10=
+Item11=
+Item12=
+Item13=
+Item14=
+Item15=
+Item16=
+Item17=
+
+[Debugging]
+DebugSourceDirs=
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+  </IDEOPTIONS>
+</PROJECT>

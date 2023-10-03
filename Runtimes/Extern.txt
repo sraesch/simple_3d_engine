@@ -1,0 +1,270 @@
+ #
+ This unit contains the configuration for the script language. 
+ #
+ 
+ #Extern variables#
+ camera    view
+ vector2   CursorForce
+ float     TimeFac
+ int       ScreenX
+ int       ScreenY
+ int       CursorX
+ int       CursorY
+ int       CursorMode
+ int       Fps
+ int       Trigger
+ vector3   ReflectVec
+ vector3   SurfaceVec
+ vector3   TraceVec
+ cursorvar cursor
+ object    me
+ object    you
+ int       CollisionResult
+ int       LoadingPos
+ int       LoadingTotal
+ string    LoadingMsg
+ 
+ #The global extern constants#
+ const YES              1
+ const NO               0
+
+ const CURSOR_FORCE     0
+ const CURSOR_SHOW      1
+ const CURSOR_SHOWFORCE 2
+
+ const NORMAL           0
+ const TRANSPARENT      1
+ const ALPHA            2
+ 
+ const SOUNDSTOP        0
+ const SOUNDPLAY        1
+ const SOUNDPAUSE       2
+ 
+ const HULL_SPHERE      0
+ const HULL_BOX         1
+ 
+ const TRACE_PASSABLE   1
+ const TRACE_OBJECTS    2
+ const TRACE_MAP        4
+ const TRACE_FIRST      8
+ 
+ const KEY_BACK         8
+ const KEY_TAB          9
+ 
+ const KEY_CLEAR        12
+ const KEY_RETURN       13
+ 
+ const KEY_SHIFT        16
+ const KEY_CONTROL      17
+ const KEY_MENU         18
+ const KEY_PAUSE        19
+ const KEY_CAPITAL      20
+ 
+ const KEY_ESCAPE       27
+ 
+ const KEY_SPACE        32
+ const KEY_PRIOR        33
+ const KEY_NEXT         34
+ const KEY_END          35
+ const KEY_HOME         36
+ const KEY_LEFT         37
+ const KEY_UP           38
+ const KEY_RIGHT        39
+ const KEY_DOWN         40
+ const KEY_SELECT       41
+ const KEY_PRINT        42
+ const KEY_EXECUTE      43
+ const KEY_SNAPSHOT     44
+ const KEY_INSERT       45
+ const KEY_DELETE       46
+ const KEY_HELP         47
+ 
+ const KEY_0            48
+ const KEY_1            49
+ const KEY_2            50
+ const KEY_3            51
+ const KEY_4            52
+ const KEY_5            53
+ const KEY_6            54
+ const KEY_7            55
+ const KEY_8            56
+ const KEY_9            57
+ 
+ const KEY_A            65
+ const KEY_B            66
+ const KEY_C            67
+ const KEY_D            68
+ const KEY_E            69
+ const KEY_F            70
+ const KEY_G            71
+ const KEY_H            72
+ const KEY_I            73
+ const KEY_J            74
+ const KEY_K            75
+ const KEY_L            76
+ const KEY_M            77
+ const KEY_N            78
+ const KEY_O            79
+ const KEY_P            80
+ const KEY_Q            81
+ const KEY_R            82
+ const KEY_S            83
+ const KEY_T            84
+ const KEY_U            85
+ const KEY_V            86
+ const KEY_W            87
+ const KEY_X            88
+ const KEY_Y            89
+ const KEY_Z            90
+ 
+ const KEY_NUMPAD0      96
+ const KEY_NUMPAD1      97
+ const KEY_NUMPAD2      98
+ const KEY_NUMPAD3      99
+ const KEY_NUMPAD4      100
+ const KEY_NUMPAD5      101
+ const KEY_NUMPAD6      102
+ const KEY_NUMPAD7      103
+ const KEY_NUMPAD8      104
+ const KEY_NUMPAD9      105
+ const KEY_MULTIPLY     106
+ const KEY_ADD          107
+ const KEY_SEPARATOR    108
+ const KEY_SUBTRACT     109
+ const KEY_DECIMAL      110
+ const KEY_DIVIDE       111
+ const KEY_F1           112
+ const KEY_F2           113
+ const KEY_F3           114
+ const KEY_F4           115
+ const KEY_F5           116
+ const KEY_F6           117
+ const KEY_F7           118
+ const KEY_F8           119
+ const KEY_F9           120
+ const KEY_F10          121
+ const KEY_F11          122
+ const KEY_F12          123
+ const KEY_F13          124
+ const KEY_F14          125
+ const KEY_F15          126
+ const KEY_F16          127
+ const KEY_F17          128
+ const KEY_F18          129
+ const KEY_F19          130
+ const KEY_F20          131
+ const KEY_F21          132
+ const KEY_F22          133
+ const KEY_F23          134
+ const KEY_F24          135
+ 
+ const KEY_NUMLOCK      136 
+ 
+ const MOUSE_LEFT       256
+ const MOUSE_MIDDLE     257
+ const MOUSE_RIGHT      258
+
+ const TRIGGER_CREATE     0
+ const TRIGGER_CREATED    1
+ const TRIGGER_COLLISION  2 
+ const TRIGGER_TOUCH      3
+ const TRIGGER_TRACE      4
+ const TRIGGER_TRACED     5
+ const TRIGGER_SCAN       6
+ const TRIGGER_SCANED     7
+ 
+ const R320x200     1
+ const R320x240     2
+ const R320x400     3
+ const R400x300     4
+ const R512x384     5 
+ const R640x480     6
+ const R800x600     7
+ const R1024x768    8
+ const R1280x960    9
+ const R1600x1200  10
+ 
+ #The global extern system functions#
+ function  vec2(float x,float y) vector2
+ function  vec3(float x,float y,float z) vector3
+ function  vec4(float x,float y,float z,float w) vector4
+ function  mat2(float a,float b,float c,float d) matrix2
+ function  mat3(float a,float b,float c,float d,
+                float e,float f,float g,float h,
+                float i) matrix3
+ function  mat4(float a,float b,float c,float d,
+                float e,float f,float g,float h,
+                float i,float j,float k,float l,
+                float m,float n,float o,float p) matrix4
+
+ function  vec2_len(vector2 vec) float
+ function  vec3_len(vector3 vec) float
+ function  vec4_len(vector4 vec) float
+ 
+ function  vec2_normalize(vector2 vec) vector2
+ function  vec3_normalize(vector3 vec) vector3
+ function  vec4_normalize(vector4 vec) vector4
+ 
+ function  vec2_dot(vector2 vec1,vector2 vec2) float
+ function  vec3_dot(vector3 vec1,vector3 vec2) float
+ function  vec4_dot(vector4 vec1,vector4 vec2) float 
+ 
+ function  vec3_angle(vector3 vec1,vector3 vec2) vector2
+ function  random(int x) int
+
+ function sin(float x) float
+ function cos(float x) float
+ function tan(float x) float
+ function asin(float x) float
+ function acos(float x) float
+ function atan(float x) float
+ #The global extern core functions#
+ procedure LoadMap(string map)
+ procedure ShowMessage(string msg)
+ function  IsKeyPressed(int key) int
+ function  vec3_move          (vector3 vec,float range,vector2 dir) vector3
+ function  vec3_move_collision(vector3 vec,float range,vector2 dir,float radius) vector3
+ function  vec3_move_collision_smooth(vector3 vec,float range,vector2 dir,float radius) vector3
+ function  vec3_move_collision2(vector3 vec,vector3 dir,float radius) vector3
+ function  vec3_move_collision_smooth2(vector3 vec,vector3 dir,float radius) vector3 
+ function  world_to_screen(vector3 vec) vector3
+ function  screen_to_world(vector3 vec) vector3
+ procedure object_move(object obj,float range,vector2 dir)
+ procedure object_move_smooth(object obj,float range,vector2 dir)
+ procedure object_move2(object obj,vector3 dir)
+ procedure object_move_smooth2(object obj,vector3 dir)
+ function  CreateLight() light
+ procedure SetLight(light l)
+ function  GetLight(int ind) light
+ procedure DeleteLight(int ind)
+ procedure SetCursor(string name)
+ procedure CreateObject(string name,procedurevar func)
+ procedure CreateObjectPos(string name,procedurevar func,vector3 pos)
+ procedure DeleteObject(object obj)
+ function  SetFont(string name) int
+ function  SetBitmap(string name) int
+ function  SphereCollisionMap(vector3 pos,float range) int  
+ function  GetNumObjects() int
+ function  GetNumProcesses() int
+ procedure SetKeyDown(int Key,procedurevar func)
+ procedure SetKeyUp(int Key,procedurevar func)
+ procedure ShutDown()
+ procedure SetResolution(int res)
+  
+ function  CreateSound(string name) sound
+ function  GetSound(int ind) sound
+ procedure SetSound(sound snd)
+ procedure DeleteSound(int ind) 
+ procedure SetSoundState(sound snd,int state)
+ 
+ function  GetModelVert(object obj,int ind) vector3
+ 
+ procedure lens_add(string lensflare,string picname,vector2 size)
+ function  lens_create(string lensflare) int
+ procedure lens_pos(int id,vector3 pos)
+ procedure lens_color(int id,int red,int green,int blue)
+ procedure lens_delete(int id)
+ 
+ procedure trace(vector3 vec1,vector3 vec2,int options,procedurevar func)
+ 
+

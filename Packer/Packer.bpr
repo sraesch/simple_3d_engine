@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="&quot;G:\Current Engine\Runtimes\Packer.exe&quot;"/>
+    <OBJFILES value="Packer.obj main.obj PackerData.obj AboutWndUnit.obj"/>
+    <RESFILES value="Packer.res"/>
+    <IDLFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) main.dfm AboutWndUnit.dfm"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value="rtl.lib vcl.lib"/>
+    <PACKAGES value="rtl.bpi vcl.bpi vclx.bpi vcljpg.bpi bcbsmp.bpi dclocx.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value=""/>
+    <SYSDEFINES value="_RTLDLL;NO_STRICT;USEPACKAGES"/>
+    <MAINSOURCE value="Packer.cpp"/>
+    <INCLUDEPATH value="C:\Programme\Borland\CBuilder4\Projects;$(BCB)\include;$(BCB)\include\vcl;..\EngineSystem;..\EngineMedia;..\EngineSound"/>
+    <LIBPATH value="..\EngineMedia;C:\Programme\Borland\CBuilder4\Projects;$(BCB)\lib\obj;$(BCB)\lib;..\Runtimes"/>
+    <WARNINGS value="-w-par -w-8027 -w-8026"/>
+    <WARNOPTSTR value=""/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <CFLAG1 value="-Od -H=g:\PROGRA~1\borland\CBUILD~1\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 
+      -b- -k -y -v -vi- -c -tW -tWM"/>
+    <PFLAGS value="-$YD -$W -$O- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpe -x -Gn -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj $(PACKAGES) Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="Packer.cpp" FORMNAME="" UNITNAME="Packer" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Packer.res" FORMNAME="" UNITNAME="Packer" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="main.cpp" FORMNAME="MainWnd" UNITNAME="main" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="PackerData.cpp" FORMNAME="" UNITNAME="PackerData" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="AboutWndUnit.cpp" FORMNAME="AboutDlg" UNITNAME="AboutWndUnit" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=1
+MajorVer=0
+MinorVer=1
+Release=1
+Build=1
+Debug=0
+PreRelease=1
+Special=0
+Private=1
+DLL=1
+Locale=1031
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=0.1.1.1
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+Privates Build=
+
+[HistoryLists\hlIncludePath]
+Count=6
+Item0=C:\Programme\Borland\CBuilder4\Projects;$(BCB)\include;$(BCB)\include\vcl;..\EngineSystem;..\EngineMedia;..\EngineSound
+Item1=C:\Programme\Borland\CBuilder4\Projects;$(BCB)\include;$(BCB)\include\vcl;..\EngineSystem;..\EngineMedia
+Item2=C:\Programme\Borland\CBuilder4\Projects;C:\Programme\Borland\CBuilder4\Projects\;$(BCB)\include;$(BCB)\include\vcl;..\EngineSystem;..\EngineMedia
+Item3=$(BCB)\include;$(BCB)\include\vcl;..\EngineSystem;..\EngineMedia
+Item4=$(BCB)\include;$(BCB)\include\vcl;../EngineSystem/;../EngineMedia/
+Item5=$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=6
+Item0=..\EngineMedia;C:\Programme\Borland\CBuilder4\Projects;$(BCB)\lib\obj;$(BCB)\lib;..\Runtimes
+Item1=..\EngineMedia;C:\Programme\Borland\CBuilder4\Projects;C:\Programme\Borland\CBuilder4\Projects\;$(BCB)\lib\obj;$(BCB)\lib;..\Runtimes
+Item2=C:\Programme\Borland\CBuilder4\Projects;$(BCB)\lib\obj;$(BCB)\lib;..\Runtimes
+Item3=$(BCB)\lib\obj;$(BCB)\lib;..\Runtimes
+Item4=$(BCB)\lib\obj;$(BCB)\lib;../Runtimes
+Item5=$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlFinalOutputDir]
+Count=9
+Item0=G:\Current Engine\Runtimes\
+Item1=G:\Current Engine\Runtimes
+Item2=..\Runtimes\
+Item3=..\RuntimesItem1=G:\Current Engine\Runtimes
+Item4=
+Item5=../Runtimes
+Item6=..\RuntimesItem1=..\RuntimesItem1=../Runtimes
+Item7=
+Item8=
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+  </IDEOPTIONS>
+</PROJECT>

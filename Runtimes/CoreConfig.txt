@@ -1,0 +1,5 @@
+shadow_bits   32
+shadow_size   128
+shadow_enable 0
+max_lights    10
+max_shadows   4

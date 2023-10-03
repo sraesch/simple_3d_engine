@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="..\RunTimes\EngineScript.dll"/>
+    <OBJFILES value="EngineScript.obj ENSysFuncs.obj ENOperatorFuncs.obj ENScriptBuilder.obj 
+      ENScriptCode.obj ENScriptExecute.obj ENScriptExpTree.obj 
+      ENScriptExtern.obj ENScriptInterpret.obj ENScriptLinker.obj 
+      ENScriptParser.obj ENScriptTypes.obj ENScriptInitDll.obj"/>
+    <RESFILES value="EngineScript.res"/>
+    <IDLFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value="rtl.lib vcl.lib"/>
+    <PACKAGES value="rtl.bpi vcl.bpi vclx.bpi vcljpg.bpi bcbsmp.bpi dclocx.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value=""/>
+    <SYSDEFINES value="_RTLDLL;NO_STRICT;USEPACKAGES"/>
+    <MAINSOURCE value="EngineScript.cpp"/>
+    <INCLUDEPATH value="C:\Programme\Borland\CBuilder4\Projects;$(BCB)\include;$(BCB)\include\vcl;..\EngineSystem;..\EngineMedia"/>
+    <LIBPATH value="C:\Programme\Borland\CBuilder4\Projects;$(BCB)\lib\obj;$(BCB)\lib;..\Runtimes"/>
+    <WARNINGS value="-w-par -w-8027 -w-8026"/>
+    <WARNOPTSTR value=""/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <CFLAG1 value="-WD -Od -H=g:\PROGRA~1\borland\CBUILD~1\lib\vcl60.csm -Hc -Vx -Ve -X- -r- 
+      -a8 -b- -k -y -v -vi- -c -tWM"/>
+    <PFLAGS value="-$YD -$W -$O- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpd -x -Gn -Gi -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0d32.obj $(PACKAGES) Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="EngineScript.cpp" FORMNAME="" UNITNAME="EngineScript" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENSysFuncs.cpp" FORMNAME="" UNITNAME="ENSysFuncs" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENOperatorFuncs.cpp" FORMNAME="" UNITNAME="ENOperatorFuncs" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENScriptBuilder.cpp" FORMNAME="" UNITNAME="ENScriptBuilder" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENScriptCode.cpp" FORMNAME="" UNITNAME="ENScriptCode" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENScriptExecute.cpp" FORMNAME="" UNITNAME="ENScriptExecute" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENScriptExpTree.cpp" FORMNAME="" UNITNAME="ENScriptExpTree" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENScriptExtern.cpp" FORMNAME="" UNITNAME="ENScriptExtern" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENScriptInterpret.cpp" FORMNAME="" UNITNAME="ENScriptInterpret" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENScriptLinker.cpp" FORMNAME="" UNITNAME="ENScriptLinker" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENScriptParser.cpp" FORMNAME="" UNITNAME="ENScriptParser" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENScriptTypes.cpp" FORMNAME="" UNITNAME="ENScriptTypes" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENScriptInitDll.cpp" FORMNAME="" UNITNAME="ENScriptInitDll" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EngineScript.res" FORMNAME="" UNITNAME="" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=1
+MajorVer=0
+MinorVer=1
+Release=1
+Build=1
+Debug=0
+PreRelease=1
+Special=0
+Private=1
+DLL=1
+Locale=1031
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=Engine intern script language
+FileVersion=0.1.1.1
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+Privates Build=
+
+[HistoryLists\hlIncludePath]
+Count=4
+Item0=C:\Programme\Borland\CBuilder4\Projects;$(BCB)\include;$(BCB)\include\vcl;..\EngineSystem;..\EngineMedia
+Item1=$(BCB)\include;$(BCB)\include\vcl;..\EngineSystem;..\EngineMedia
+Item2=$(BCB)\include;$(BCB)\include\vcl;G:\Current Engine\EngineSystem
+Item3=$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=4
+Item0=C:\Programme\Borland\CBuilder4\Projects;$(BCB)\lib\obj;$(BCB)\lib;..\Runtimes
+Item1=$(BCB)\lib\obj;$(BCB)\lib;..\Runtimes
+Item2=$(BCB)\lib\obj;$(BCB)\lib;G:\Current Engine\Runtimes
+Item3=$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlFinalOutputDir]
+Count=4
+Item0=..\RunTimes\
+Item1=..\RunTimesItem1=..\RunTimesItem1=..\RunTimes[Debugging]
+Item2=
+Item3=
+
+[Debugging]
+DebugSourceDirs=
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+
+[Linker]
+LibPrefix=
+LibSuffix=
+LibVersion=
+  </IDEOPTIONS>
+</PROJECT>

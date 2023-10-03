@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="&quot;G:\Current Engine\Runtimes\ScriptTest.exe&quot;"/>
+    <OBJFILES value="ScriptTest.obj"/>
+    <RESFILES value=""/>
+    <IDLFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value=""/>
+    <PACKAGES value="rtl.bpi vcl.bpi vclx.bpi bcbsmp.bpi dclocx.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value=""/>
+    <SYSDEFINES value="_NO_VCL;_VIS_NOLIB"/>
+    <MAINSOURCE value="ScriptTest.cpp"/>
+    <INCLUDEPATH value="$(BCB)\include;..\EngineScript;..\EngineSystem;..\EngineMedia"/>
+    <LIBPATH value="$(BCB)\lib;..\Runtimes"/>
+    <WARNINGS value=""/>
+    <WARNOPTSTR value=""/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-src_suffix cpp -boa"/>
+    <CFLAG1 value="-Od -w -Tkh30000 -X- -r- -a8 -b -k -y -v -vi- -c -tWM -tWC"/>
+    <PFLAGS value="-$YD -$W -$O- -$A8 -v -JPHN -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-D&quot;&quot; -ap -Tpe -x -Gn -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0x32.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES)  import32.lib cw32mt.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="ScriptTest.cpp" FORMNAME="" UNITNAME="ScriptTest" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1031
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=Executable (Console)
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=2
+Item0=$(BCB)\include;..\EngineScript;..\EngineSystem;..\EngineMedia
+Item1=$(BCB)\include;G:\Current Engine\EngineScript;G:\Current Engine\EngineSystem;G:\Current Engine\EngineMedia
+
+[HistoryLists\hlLibraryPath]
+Count=2
+Item0=$(BCB)\lib;..\Runtimes
+Item1=$(BCB)\lib;G:\Current Engine\Runtimes
+
+[HistoryLists\hlFinalOutputDir]
+Count=3
+Item0=G:\Current Engine\Runtimes\
+Item1=..\Runtimes\
+Item2=..\Runtimes[Debugging]
+
+[Debugging]
+DebugSourceDirs=
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=1
+  </IDEOPTIONS>
+</PROJECT>

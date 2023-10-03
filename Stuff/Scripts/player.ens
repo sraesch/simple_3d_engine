@@ -1,0 +1,279 @@
+#
+ Player script
+#
+
+var int   weapon;
+var int   ammo;
+var vector2 SVec;
+var object playerobj;
+
+action _PlasmaShotObj
+{
+ if(Trigger==TRIGGER_CREATE)
+ {
+  #Config plasma shot#
+  me.Passable=YES;
+  me.Lighting=NO;
+  me.Shadow=NO;
+  me.ViewX=YES;
+  me.ViewY=YES;
+  me.Mode=ALPHA;
+  me.Scale=vec3(1.0,1.0,1.0);
+  waitt 50;
+  DeleteObject(me);
+ }
+}
+
+action _PlasmaImpact
+{
+ if(Trigger==TRIGGER_CREATE)
+ {
+  #Config plasma shot#
+  me.Passable=YES;
+  me.Lighting=NO;
+  me.Shadow=NO;
+  me.Mode=ALPHA;
+  me.angle.x=SVec.x;
+  me.angle.y=SVec.y;
+  me.Scale=vec3(0.5,0.5,0.5);
+  #Config sound#
+  var sound s;
+  s=CreateSound("plasmahit");
+  s.range=450.0;
+  s.pos=me.pos;
+  SetSound(s);
+  SetSoundState(s,SOUNDPLAY);
+  while(me.Scale.x<5.0)
+  {
+   me.Scale=me.Scale+10.0*TimeFac;
+   wait 1;
+  }
+  waitt 100;
+  DeleteSound(s.id);
+  DeleteObject(me);
+ }
+}
+
+action _PlasmaSphere
+{
+ if(Trigger==TRIGGER_CREATE)
+ {
+  var light l;
+  var sound s;
+  #Config light#  
+  l=CreateLight();
+  l.spotcutoff=180.0;
+  l.range=300.0;
+  l.pos=me.pos;
+  l.r=180;
+  l.g=210;
+  l.b=255;
+  SetLight(l);  
+  #Config sound#
+  s=CreateSound("plasmaidle");
+  s.range=200.0;
+  SetSound(s);
+  SetSoundState(s,SOUNDPLAY);
+  #Config plasma ball#
+  me.LocalInts0=0;
+  me.LocalInts1=l.id;
+  me.LocalInts2=s.id;
+  me.angle=view.angle;
+  me.Passable=YES;
+  me.Lighting=NO;
+  me.Shadow=NO;
+  me.ViewX=YES;
+  me.ViewY=YES;
+  me.Mode=ALPHA;
+  me.Scale=vec3(0.5,0.5,0.5);
+  #Start plasma ball#
+  while(YES)
+  {   
+   object_move(me,500.0*TimeFac,vec2(-1*me.angle.x,me.angle.y));
+   l.pos=me.pos;
+   s.pos=me.pos;
+   me.angle.z=me.angle.z+720.0*TimeFac;
+   SetLight(l);
+   SetSound(s);
+   wait 1;
+  }
+ }
+ if(Trigger==TRIGGER_COLLISION)
+ {
+  var vector2 ndir;
+  ndir=vec3_angle(ReflectVec,vec3(0,0,0));
+  svec=vec3_angle(SurfaceVec,vec3(0,0,0));
+  me.angle.x=ndir.x;
+  me.angle.y=ndir.y;
+  me.LocalInts0=me.LocalInts0+1;
+  if(me.LocalInts0==2)
+  {
+   CreateObjectPos("plasmaimpact",_PlasmaImpact,me.pos);
+   wait 1;
+   DeleteLight(me.LocalInts1);
+   DeleteSound(me.LocalInts2);
+   DeleteObject(me);
+  }
+ }
+}
+
+action _PlayerShot
+{
+ CreateObjectPos("plasmashot",_PlasmaShotObj,
+                 screen_to_world(vec3(ScreenX/2,ScreenY/2,10)));
+
+ CreateObjectPos("plasmaball",_PlasmaSphere,
+                 screen_to_world(vec3(ScreenX/2,ScreenY/2,10)));
+ var sound s;
+ s=CreateSound("shot");
+ s.pos=view.pos;
+ s.range=40000;
+ SetSound(s);
+ SetSoundState(s,SOUNDPLAY);
+ waitt 5000;
+ DeleteSound(s.id);
+}
+
+procedure InitPlayer()
+{
+ weapon=NO;
+ ammo=0;
+ SetKeyDown(MOUSE_LEFT,_PlayerShot);
+}
+
+action _PlayerAngle
+{
+ #Transform angles#
+ view.angle.x=view.angle.x+CursorForce.y*0.5;
+ view.angle.y=view.angle.y+CursorForce.x*0.5; 
+ if(view.angle.x<(-90))
+ {
+  view.angle.x=-90;
+ }
+ if(view.angle.x>90)
+ {
+  view.angle.x=90;
+ }
+ #Update object angle#
+ me.angle.y=view.angle.y;
+}
+
+action _PlayerPos
+{
+ #Variables#
+ var float range; 
+ #Calculate range to move#
+ range=0.0;
+ if(IsKeyPressed(KEY_UP))
+ {
+  range=300.0*TimeFac;
+ }
+ if(IsKeyPressed(KEY_DOWN))
+ {
+  range=-300.0*TimeFac;
+ }   
+ #Set sound volume#
+ var sound snd;
+ snd=GetSound(me.LocalInts0);
+ if(IsKeyPressed(KEY_UP)||IsKeyPressed(KEY_DOWN))
+ {
+  if(me.LocalInts1==0)
+  {
+   me.LocalInts1=1;
+   SetSoundState(snd,SOUNDPLAY);
+  }
+ }
+ else
+ {  
+  me.LocalInts1=0;
+  SetSoundState(snd,SOUNDPAUSE);
+ }
+ SetSound(snd);
+ #move player#
+ object_move_smooth(me,range,vec2(me.angle.x+15,me.angle.y));
+
+ view.pos=me.pos;
+ view.pos.y=view.pos.y+65.0;
+ #gravity#
+ object_move2(me,vec3(0,-1*me.LocalFloats0,0));
+}
+
+action shotfunc
+{
+ if(Trigger==TRIGGER_CREATE)
+ {
+  me.Passable=YES;
+  me.Shadow=NO; 
+  me.Scale=vec3(0.2,0.2,0.2); 
+  
+  while(YES)
+  {
+   me.angle=view.angle;
+   me.pos=view.pos;
+   wait 1;
+  }
+ }
+}
+
+action _PlayerJump
+{
+ if(IsKeyPressed(KEY_SPACE))
+ {
+  var sound snd;
+  snd=GetSound(me.LocalInts2);
+  SetSoundState(snd,SOUNDPLAY);
+  me.LocalFloats0=-2.0;
+ }
+}
+
+action PlayerFunc
+{
+ if(Trigger==TRIGGER_CREATE)
+ {  
+  var sound walksnd;
+  var sound jumpsnd;
+  playerobj=me;
+  #Config sound#
+  walksnd=CreateSound("walk");
+  walksnd.range=1000;
+  walksnd.loop=YES;
+  SetSound(walksnd);
+  SetSoundState(walksnd,SOUNDPLAY);
+  me.LocalInts0=walksnd.id;
+  #Config sound#
+  jumpsnd=CreateSound("jump");
+  jumpsnd.range=1000;
+  SetSound(jumpsnd);
+  me.LocalInts2=jumpsnd.id;
+  #Config player# 
+  me.LocalInts1=1;
+  me.Visible=NO;
+  me.Shadow=NO;
+  me.Passable=YES;
+  me.LocalFloats0=0.0;
+  #Create shotgun#
+  CreateObjectPos("shotgunhand2",shotfunc,me.Pos);
+  #Process player#
+  while(YES)
+  {
+   _PlayerPos();
+   _PlayerAngle();   
+   me.LocalFloats0=me.LocalFloats0+9.81*TimeFac;   
+   #walk sound#
+   walksnd.pos=me.pos;
+   SetSound(walksnd);
+   #jump sound#
+   jumpsnd.pos=me.pos;
+   SetSound(jumpsnd);
+   wait 1;
+  }
+ }
+ if(Trigger==TRIGGER_COLLISION)
+ {  
+  if(acos(vec3_dot(ReflectVec,vec3(0,1,0)))<=45.0)
+  {
+   me.LocalFloats0=0.0;
+   _PlayerJump();
+  }
+ }
+}

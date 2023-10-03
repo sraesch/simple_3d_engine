@@ -1,0 +1,252 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="&quot;G:\Current Engine\Runtimes\EngineMedia.dll&quot;"/>
+    <OBJFILES value="main.obj ENVertexArray.obj ENASCIIMesh.obj EngineFont.obj EngineMap.obj 
+      EngineMapBuilder.obj EngineMaterial.obj EngineMedia.obj EngineModel.obj 
+      EnginePacker.obj EngineShader.obj EngineSprite.obj ENPicture.obj 
+      png\zutil.obj png\adler32.obj png\compress.obj png\crc32.obj 
+      png\deflate.obj png\gzio.obj png\infback.obj png\inffast.obj 
+      png\inflate.obj png\inftrees.obj png\minigzip.obj png\png.obj 
+      png\pngerror.obj png\pnggccrd.obj png\pngget.obj png\pngmem.obj 
+      png\pngpread.obj png\pngread.obj png\pngrio.obj png\pngrtran.obj 
+      png\pngrutil.obj png\pngset.obj png\pngtest.obj png\pngtrans.obj 
+      png\pngvcrd.obj png\pngwio.obj png\pngwrite.obj png\pngwtran.obj 
+      png\pngwutil.obj png\trees.obj png\uncompr.obj jpeg\rdtarga.obj 
+      jpeg\cdjpeg.obj jpeg\jcapimin.obj jpeg\jcapistd.obj jpeg\jccoefct.obj 
+      jpeg\jccolor.obj jpeg\jcdctmgr.obj jpeg\jchuff.obj jpeg\jcinit.obj 
+      jpeg\jcmainct.obj jpeg\jcmarker.obj jpeg\jcmaster.obj jpeg\jcomapi.obj 
+      jpeg\jcparam.obj jpeg\jcphuff.obj jpeg\jcprepct.obj jpeg\jcsample.obj 
+      jpeg\jctrans.obj jpeg\jdapimin.obj jpeg\jdapistd.obj jpeg\jdatadst.obj 
+      jpeg\jdatasrc.obj jpeg\jdcoefct.obj jpeg\jdcolor.obj jpeg\jddctmgr.obj 
+      jpeg\jdhuff.obj jpeg\jdinput.obj jpeg\jdmainct.obj jpeg\jdmarker.obj 
+      jpeg\jdmaster.obj jpeg\jdmerge.obj jpeg\jdphuff.obj jpeg\jdpostct.obj 
+      jpeg\jdsample.obj jpeg\jdtrans.obj jpeg\jerror.obj jpeg\jfdctflt.obj 
+      jpeg\jfdctfst.obj jpeg\jfdctint.obj jpeg\jidctflt.obj jpeg\jidctfst.obj 
+      jpeg\jidctint.obj jpeg\jidctred.obj jpeg\jmemmgr.obj jpeg\jmemnobs.obj 
+      jpeg\jquant1.obj jpeg\jquant2.obj jpeg\jutils.obj jpeg\rdbmp.obj 
+      jpeg\rdcolmap.obj jpeg\rdgif.obj jpeg\rdppm.obj jpeg\rdrle.obj 
+      jpeg\rdswitch.obj BspTree.obj"/>
+    <RESFILES value="EngineMedia.res"/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value=""/>
+    <PACKAGES value="vcl.bpi rtl.bpi vclx.bpi bcbsmp.bpi dclocx.bpi"/>
+    <PATHCPP value=".;png;png;png;png;png;png;png;png;png;png;png;png;png;png;png;png;png;png;png;png;png;png;png;png;png;png;png;png;png;png;png;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg;jpeg"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="_DEBUG"/>
+    <SYSDEFINES value="NO_STRICT;_NO_VCL;_RTLDLL;USEPACKAGES"/>
+    <MAINSOURCE value="EngineMedia.bpf"/>
+    <INCLUDEPATH value="G:\Programme\Borland\CBuilder6\Projects;jpeg;png;&quot;G:\Current Engine\EngineMedia&quot;;$(BCB)\include;$(BCB)\include\vcl;&quot;G:\Current Engine\EngineSystem&quot;;&quot;G:\Current Engine\EngineSound&quot;"/>
+    <LIBPATH value="G:\Programme\Borland\CBuilder6\Projects;jpeg;png;&quot;G:\Current Engine\EngineMedia&quot;;$(BCB)\lib\obj;$(BCB)\lib;&quot;G:\Current Engine\Runtimes&quot;"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <CFLAG1 value="-WD -Od -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- 
+      -tWD -tWM- -c"/>
+    <PFLAGS value="-$YD -$W -$O- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpd -x -Gn -Gi -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0d32.obj $(PACKAGES) $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cw32i.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="EngineMedia.res" FORMNAME="" UNITNAME="EngineMedia.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EngineMedia.bpf" FORMNAME="" UNITNAME="EngineMedia" CONTAINERID="BPF" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="main.cpp" FORMNAME="" UNITNAME="main" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENVertexArray.cpp" FORMNAME="" UNITNAME="ENVertexArray.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENASCIIMesh.cpp" FORMNAME="" UNITNAME="ENASCIIMesh.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EngineFont.cpp" FORMNAME="" UNITNAME="EngineFont.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EngineMap.cpp" FORMNAME="" UNITNAME="EngineMap.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EngineMapBuilder.cpp" FORMNAME="" UNITNAME="EngineMapBuilder.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EngineMaterial.cpp" FORMNAME="" UNITNAME="EngineMaterial.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EngineMedia.cpp" FORMNAME="" UNITNAME="EngineMedia.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EngineModel.cpp" FORMNAME="" UNITNAME="EngineModel.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EnginePacker.cpp" FORMNAME="" UNITNAME="EnginePacker.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EngineShader.cpp" FORMNAME="" UNITNAME="EngineShader.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EngineSprite.cpp" FORMNAME="" UNITNAME="EngineSprite.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENPicture.cpp" FORMNAME="" UNITNAME="ENPicture.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png\zutil.c" FORMNAME="" UNITNAME="zutil.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png\adler32.c" FORMNAME="" UNITNAME="adler32.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png\compress.c" FORMNAME="" UNITNAME="compress.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png\crc32.c" FORMNAME="" UNITNAME="crc32.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png\deflate.c" FORMNAME="" UNITNAME="deflate.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png\gzio.c" FORMNAME="" UNITNAME="gzio.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png\infback.c" FORMNAME="" UNITNAME="infback.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png\inffast.c" FORMNAME="" UNITNAME="inffast.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png\inflate.c" FORMNAME="" UNITNAME="inflate.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png\inftrees.c" FORMNAME="" UNITNAME="inftrees.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png\minigzip.c" FORMNAME="" UNITNAME="minigzip.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png\png.c" FORMNAME="" UNITNAME="png.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png\pngerror.c" FORMNAME="" UNITNAME="pngerror.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png\pnggccrd.c" FORMNAME="" UNITNAME="pnggccrd.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png\pngget.c" FORMNAME="" UNITNAME="pngget.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png\pngmem.c" FORMNAME="" UNITNAME="pngmem.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png\pngpread.c" FORMNAME="" UNITNAME="pngpread.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png\pngread.c" FORMNAME="" UNITNAME="pngread.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png\pngrio.c" FORMNAME="" UNITNAME="pngrio.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png\pngrtran.c" FORMNAME="" UNITNAME="pngrtran.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png\pngrutil.c" FORMNAME="" UNITNAME="pngrutil.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png\pngset.c" FORMNAME="" UNITNAME="pngset.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png\pngtest.c" FORMNAME="" UNITNAME="pngtest.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png\pngtrans.c" FORMNAME="" UNITNAME="pngtrans.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png\pngvcrd.c" FORMNAME="" UNITNAME="pngvcrd.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png\pngwio.c" FORMNAME="" UNITNAME="pngwio.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png\pngwrite.c" FORMNAME="" UNITNAME="pngwrite.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png\pngwtran.c" FORMNAME="" UNITNAME="pngwtran.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png\pngwutil.c" FORMNAME="" UNITNAME="pngwutil.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png\trees.c" FORMNAME="" UNITNAME="trees.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="png\uncompr.c" FORMNAME="" UNITNAME="uncompr.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\rdtarga.c" FORMNAME="" UNITNAME="rdtarga.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\cdjpeg.c" FORMNAME="" UNITNAME="cdjpeg.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jcapimin.c" FORMNAME="" UNITNAME="jcapimin.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jcapistd.c" FORMNAME="" UNITNAME="jcapistd.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jccoefct.c" FORMNAME="" UNITNAME="jccoefct.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jccolor.c" FORMNAME="" UNITNAME="jccolor.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jcdctmgr.c" FORMNAME="" UNITNAME="jcdctmgr.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jchuff.c" FORMNAME="" UNITNAME="jchuff.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jcinit.c" FORMNAME="" UNITNAME="jcinit.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jcmainct.c" FORMNAME="" UNITNAME="jcmainct.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jcmarker.c" FORMNAME="" UNITNAME="jcmarker.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jcmaster.c" FORMNAME="" UNITNAME="jcmaster.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jcomapi.c" FORMNAME="" UNITNAME="jcomapi.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jcparam.c" FORMNAME="" UNITNAME="jcparam.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jcphuff.c" FORMNAME="" UNITNAME="jcphuff.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jcprepct.c" FORMNAME="" UNITNAME="jcprepct.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jcsample.c" FORMNAME="" UNITNAME="jcsample.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jctrans.c" FORMNAME="" UNITNAME="jctrans.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jdapimin.c" FORMNAME="" UNITNAME="jdapimin.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jdapistd.c" FORMNAME="" UNITNAME="jdapistd.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jdatadst.c" FORMNAME="" UNITNAME="jdatadst.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jdatasrc.c" FORMNAME="" UNITNAME="jdatasrc.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jdcoefct.c" FORMNAME="" UNITNAME="jdcoefct.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jdcolor.c" FORMNAME="" UNITNAME="jdcolor.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jddctmgr.c" FORMNAME="" UNITNAME="jddctmgr.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jdhuff.c" FORMNAME="" UNITNAME="jdhuff.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jdinput.c" FORMNAME="" UNITNAME="jdinput.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jdmainct.c" FORMNAME="" UNITNAME="jdmainct.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jdmarker.c" FORMNAME="" UNITNAME="jdmarker.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jdmaster.c" FORMNAME="" UNITNAME="jdmaster.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jdmerge.c" FORMNAME="" UNITNAME="jdmerge.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jdphuff.c" FORMNAME="" UNITNAME="jdphuff.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jdpostct.c" FORMNAME="" UNITNAME="jdpostct.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jdsample.c" FORMNAME="" UNITNAME="jdsample.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jdtrans.c" FORMNAME="" UNITNAME="jdtrans.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jerror.c" FORMNAME="" UNITNAME="jerror.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jfdctflt.c" FORMNAME="" UNITNAME="jfdctflt.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jfdctfst.c" FORMNAME="" UNITNAME="jfdctfst.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jfdctint.c" FORMNAME="" UNITNAME="jfdctint.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jidctflt.c" FORMNAME="" UNITNAME="jidctflt.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jidctfst.c" FORMNAME="" UNITNAME="jidctfst.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jidctint.c" FORMNAME="" UNITNAME="jidctint.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jidctred.c" FORMNAME="" UNITNAME="jidctred.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jmemmgr.c" FORMNAME="" UNITNAME="jmemmgr.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jmemnobs.c" FORMNAME="" UNITNAME="jmemnobs.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jquant1.c" FORMNAME="" UNITNAME="jquant1.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jquant2.c" FORMNAME="" UNITNAME="jquant2.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\jutils.c" FORMNAME="" UNITNAME="jutils.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\rdbmp.c" FORMNAME="" UNITNAME="rdbmp.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\rdcolmap.c" FORMNAME="" UNITNAME="rdcolmap.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\rdgif.c" FORMNAME="" UNITNAME="rdgif.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\rdppm.c" FORMNAME="" UNITNAME="rdppm.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\rdrle.c" FORMNAME="" UNITNAME="rdrle.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="jpeg\rdswitch.c" FORMNAME="" UNITNAME="rdswitch.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="BspTree.cpp" FORMNAME="" UNITNAME="BspTree" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=1
+MajorVer=0
+MinorVer=1
+Release=1
+Build=1
+Debug=0
+PreRelease=1
+Special=0
+Private=1
+DLL=1
+Locale=1031
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=Engine Media Library
+FileVersion=0.1.1.1
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+Privates Build=
+
+[HistoryLists\hlIncludePath]
+Count=3
+Item0=jpeg;png;G:\Current Engine\EngineMedia;$(BCB)\include;$(BCB)\include\vcl;G:\Current Engine\EngineSystem;G:\Current Engine\EngineSound
+Item1=jpeg;png;G:\Current Engine\EngineMedia;$(BCB)\include;$(BCB)\include\vcl;G:\Current Engine\EngineSystem
+Item2=jpeg;png;G:\Current Engine\EngineMedia;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=2
+Item0=jpeg;png;G:\Current Engine\EngineMedia;$(BCB)\lib\obj;$(BCB)\lib;G:\Current Engine\Runtimes
+Item1=jpeg;png;G:\Current Engine\EngineMedia;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[HistoryLists\hlFinalOutputDir]
+Count=2
+Item0=G:\Current Engine\Runtimes\
+Item1=G:\Current Engine\Runtimes
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+
+[Linker]
+LibPrefix=
+LibSuffix=
+LibVersion=
+  </IDEOPTIONS>
+</PROJECT>

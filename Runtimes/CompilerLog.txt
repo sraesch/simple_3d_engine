@@ -1,0 +1,3 @@
+(60) : error C0000: syntax error, unexpected floating point constant, expecting ')' at token "<float-const>"
+(60) : error C0501: type name expected at token "<float-const>"
+

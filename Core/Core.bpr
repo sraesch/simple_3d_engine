@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="&quot;G:\Current Engine\Runtimes\Core.exe&quot;"/>
+    <OBJFILES value="main.obj ENCoreWindow.obj ENCore2D.obj ENCoreCollision.obj 
+      ENCoreDepthBuffer.obj ENCoreGL.obj ENCoreInput.obj ENCoreLight.obj 
+      ENCoreLoader.obj ENCoreMain.obj ENCoreMap.obj ENCoreMath.obj 
+      ENCorePacker.obj ENCoreProcesses.obj ENCoreScript.obj ENCoreShaders.obj 
+      ENCoreView.obj ENCoreRenderer.obj ENCoreObjects.obj ENCoreConfig.obj 
+      ENCoreSound.obj ENLensFlare.obj ENCoreAlphaBuffer.obj"/>
+    <RESFILES value="Core.res"/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value="rtl.lib"/>
+    <PACKAGES value="vcl.bpi rtl.bpi vclx.bpi bcbsmp.bpi dclocx.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="_DEBUG"/>
+    <SYSDEFINES value="NO_STRICT;_NO_VCL;_RTLDLL;USEPACKAGES"/>
+    <MAINSOURCE value="Core.bpf"/>
+    <INCLUDEPATH value="G:\Programme\Borland\CBuilder6\Projects;&quot;G:\Current Engine\Core&quot;;$(BCB)\include;$(BCB)\include\vcl;&quot;G:\Current Engine\EngineSystem&quot;;&quot;G:\Current Engine\EngineMedia&quot;;&quot;G:\Current Engine\EngineScript&quot;;&quot;G:\Current Engine\EngineSound&quot;"/>
+    <LIBPATH value="G:\Programme\Borland\CBuilder6\Projects;&quot;G:\Current Engine\Core&quot;;$(BCB)\lib\obj;$(BCB)\lib;&quot;G:\Current Engine\Runtimes&quot;"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <CFLAG1 value="-Od -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- -tW 
+      -tWM- -c"/>
+    <PFLAGS value="-$YD -$W -$O- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpe -x -Gn -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj $(PACKAGES) $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cw32i.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="Core.res" FORMNAME="" UNITNAME="Core.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Core.bpf" FORMNAME="" UNITNAME="Core" CONTAINERID="BPF" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="main.cpp" FORMNAME="" UNITNAME="main" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENCoreWindow.cpp" FORMNAME="" UNITNAME="ENCoreWindow.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENCore2D.cpp" FORMNAME="" UNITNAME="ENCore2D.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENCoreCollision.cpp" FORMNAME="" UNITNAME="ENCoreCollision.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENCoreDepthBuffer.cpp" FORMNAME="" UNITNAME="ENCoreDepthBuffer.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENCoreGL.cpp" FORMNAME="" UNITNAME="ENCoreGL.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENCoreInput.cpp" FORMNAME="" UNITNAME="ENCoreInput.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENCoreLight.cpp" FORMNAME="" UNITNAME="ENCoreLight.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENCoreLoader.cpp" FORMNAME="" UNITNAME="ENCoreLoader.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENCoreMain.cpp" FORMNAME="" UNITNAME="ENCoreMain.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENCoreMap.cpp" FORMNAME="" UNITNAME="ENCoreMap.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENCoreMath.cpp" FORMNAME="" UNITNAME="ENCoreMath.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENCorePacker.cpp" FORMNAME="" UNITNAME="ENCorePacker.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENCoreProcesses.cpp" FORMNAME="" UNITNAME="ENCoreProcesses.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENCoreScript.cpp" FORMNAME="" UNITNAME="ENCoreScript.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENCoreShaders.cpp" FORMNAME="" UNITNAME="ENCoreShaders.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENCoreView.cpp" FORMNAME="" UNITNAME="ENCoreView.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENCoreRenderer.cpp" FORMNAME="" UNITNAME="ENCoreRenderer" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENCoreObjects.cpp" FORMNAME="" UNITNAME="ENCoreObjects" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENCoreConfig.cpp" FORMNAME="" UNITNAME="ENCoreConfig" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENCoreSound.cpp" FORMNAME="" UNITNAME="ENCoreSound" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENLensFlare.cpp" FORMNAME="" UNITNAME="ENLensFlare" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ENCoreAlphaBuffer.cpp" FORMNAME="" UNITNAME="ENCoreAlphaBuffer" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=1
+MajorVer=0
+MinorVer=1
+Release=1
+Build=1
+Debug=0
+PreRelease=1
+Special=0
+Private=1
+DLL=1
+Locale=1031
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=Engine core modul
+FileVersion=0.1.1.1
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+Privates Build=
+
+[HistoryLists\hlIncludePath]
+Count=4
+Item0=G:\Programme\Borland\CBuilder6\Projects;G:\Current Engine\Core;$(BCB)\include;$(BCB)\include\vcl;G:\Current Engine\EngineSystem;G:\Current Engine\EngineMedia;G:\Current Engine\EngineScript;G:\Current Engine\EngineSound
+Item1=G:\Programme\Borland\CBuilder6\Projects;G:\Current Engine\Core;$(BCB)\include;$(BCB)\include\vcl;G:\Current Engine\EngineSystem;G:\Current Engine\EngineMedia;G:\Current Engine\EngineScript
+Item2=G:\Current Engine\Core;$(BCB)\include;$(BCB)\include\vcl;G:\Current Engine\EngineSystem;G:\Current Engine\EngineMedia;G:\Current Engine\EngineScript
+Item3=G:\Current Engine\Core;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=3
+Item0=G:\Programme\Borland\CBuilder6\Projects;G:\Current Engine\Core;$(BCB)\lib\obj;$(BCB)\lib;G:\Current Engine\Runtimes
+Item1=G:\Current Engine\Core;$(BCB)\lib\obj;$(BCB)\lib;G:\Current Engine\Runtimes
+Item2=G:\Current Engine\Core;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[HistoryLists\hlFinalOutputDir]
+Count=2
+Item0=G:\Current Engine\Runtimes\
+Item1=G:\Current Engine\Runtimes
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+  </IDEOPTIONS>
+</PROJECT>

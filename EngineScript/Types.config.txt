@@ -1,0 +1,102 @@
+#
+This unit contains the specifications of the different scripttypes.
+#
+PACK REF vector2 
+float x float y 
+END
+
+PACK REF vector3 
+float x float y float z 
+END
+
+PACK REF vector4 
+float x float y float z float w
+END
+
+PACK REF matrix2 
+float x1 float x2 
+float y1 float y2 
+END 
+
+PACK REF matrix3 
+float x1 float x2 float x3
+float y1 float y2 float y3
+float z1 float z2 float z3
+END 
+
+PACK REF matrix4
+float x1 float x2 float x3 float x4
+float y1 float y2 float y3 float y4
+float z1 float z2 float z3 float z4
+float w1 float w2 float w3 float w4
+END
+
+PACK REF Camera
+vector3 Pos vector3 Angle
+float Arc float Range
+END
+
+PACK REF light
+int r int g int b
+vector3 pos
+float range
+int ID
+END
+
+PACK REF text
+ string  text
+ vector2 Pos vector2 Size
+ int     Mode
+ int     Layer
+ int     ColorR int ColorG int ColorB int ColorA
+ int     Visible int Mirror
+ int     Font
+END
+
+PACK REF panel
+ vector2   Pos vector2 Size
+ int       Mode
+ int       Layer 
+ int       ColorR int ColorG int ColorB int ColorA
+ int       Visible int MirrorX int MirrorY
+ int       Bitmap
+END
+
+PACK REF cursorvar
+ vector2 Size
+ int Mode
+ int MirrorX int MirrorY
+ int r1 int g1 int b1 int a1
+ int r2 int g2 int b2 int a2
+ int r3 int g3 int b3 int a3
+ int r4 int g4 int b4 int a4
+END
+
+PACK REF sound
+ vector3 pos
+ float   volume
+ float   dist
+ int     source
+ int     ID
+END
+
+PACK PTR object
+ vector3      Pos vector3 Angle vector3 Scale
+ float        Frame
+ int          CurrentSkin
+ int          Func
+ int          Visible int Passable int ViewX int ViewY
+ int          Mode
+ int          Red int Green int Blue int Alpha
+ int          Lighting int CullFace int DepthBuffer
+ int          LocalInts0 int LocalInts1 int LocalInts2
+ int          LocalInts3 int LocalInts4 int LocalInts5
+ int          LocalInts6 int LocalInts7 int LocalInts8
+ float        LocalFloats0 float LocalFloats1 float LocalFloats2
+ float        LocalFloats3 float LocalFloats4 float LocalFloats5
+ float        LocalFloats6 float LocalFloats7 float LocalFloats8
+ int          Hull
+ procedurevar Event
+ int          SPACE
+END
+

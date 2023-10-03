@@ -1,0 +1,364 @@
+ #
+ Test script
+ Written by scratchy
+#
+
+path "packages"
+path "maps"
+
+package "stdpack.enginepack"
+
+include "player.ens"
+
+var text  fpstxt;
+var light l;
+
+action stangefunc
+{
+ me.hull=HULL_BOX;
+ me.StaticHull=NO;
+ me.Angle.x=90.0;
+ while(IsKeyPressed(KEY_L)==NO)
+ {
+  wait 1;
+ }
+ me.frame=1;
+}
+
+procedure MoveCamera()
+{
+ #Variables#
+ var float range;
+ #Calculate range to move#
+ range=0.0;
+ if(IsKeyPressed(KEY_UP))
+ {
+  range=1000.0*TimeFac;
+ }
+ if(IsKeyPressed(KEY_DOWN))
+ {
+  range=-1000.0*TimeFac;
+ }  
+ #Update camera angle#
+ view.angle.x=view.angle.x+CursorForce.y*0.5;
+ view.angle.y=view.angle.y+CursorForce.x*0.5; 
+ #Move camera# 
+ view.pos=vec3_move(view.pos,range,vec2(-1*view.angle.x,view.angle.y));
+}
+
+action LoadMap1
+{
+ LoadMap("test.enbuildmap");
+}
+
+action LoadMap2
+{
+ LoadMap("test2.enbuildmap");
+}
+
+action LoadMap3
+{
+ LoadMap("test3.enbuildmap");
+}
+
+action Zauberer
+{
+ if(Trigger==TRIGGER_CREATE)
+ {
+  while(1)
+  {
+   me.Angle.y=me.Angle.y+45.0*TimeFac;
+   wait 1;
+  }
+ }
+}
+
+action droid
+{
+ if(Trigger==TRIGGER_CREATE)
+ {
+  while(1)
+  {
+   me.Frame=me.Frame+10.0*TimeFac;
+   wait 1;
+  }
+ }
+}
+
+action moveobj
+{
+ if(Trigger==TRIGGER_CREATE)
+ {  
+  var vector3 vec;
+
+  while(1)
+  {   
+   if(IsKeyPressed(KEY_A))
+   {    
+    vec=vec3(-1.0,0,0);
+   }
+   if(IsKeyPressed(KEY_W))
+   {
+    vec=vec3(0,0,1.0);
+   }
+   if(IsKeyPressed(KEY_D))
+   {
+    vec=vec3(1.0,0,0);
+   }
+   if(IsKeyPressed(KEY_S))
+   {
+    vec=vec3(0,0,-1.0);
+   }
+   if(IsKeyPressed(KEY_R))
+   {
+    vec=vec3(0,1.0,0);
+   }
+   if(IsKeyPressed(KEY_F))
+   {
+    vec=vec3(0,-1.0,0);
+   }
+   
+   me.pos=vec3_move_collision2(me.pos,vec*100.0*timefac,10.0);
+   wait 1;
+  }
+ } 
+ if(Trigger==TRIGGER_COLLISION)
+ {
+  DeleteObject(me);
+ }
+}
+
+action movetest
+{
+ if(Trigger==TRIGGER_CREATE)
+ {  
+  var light li;  
+  var sound sn;
+  me.Passable=YES;
+  me.LocalFloats0=0.5;
+  me.LocalFloats1=0.6;
+  me.LocalFloats2=0.7;
+  me.Scale=vec3(0.2,0.2,0.2);
+  me.Green=random(256);
+  me.Blue=random(256);
+  me.Red=random(256);
+  me.Lighting=NO;
+  me.Shadow=NO;
+
+  waitt 5000;
+
+  li=CreateLight();
+  li.range=400.0;
+  li.r=me.Red;
+  li.g=me.Green;
+  li.b=me.Blue;
+  
+  sn=CreateSound("sound3"); 
+  sn.range=400.0;
+  sn.angle=360.0;
+  sn.volume=2.0;
+  sn.speed=1.0;
+  sn.dir=vec2(0,0);
+  sn.loop=YES;
+  sn.pos=me.pos;
+  SetSound(sn);
+  SetSoundState(sn,SOUNDPLAY);  
+  
+  me.Passable=NO;
+  while(YES)
+  {
+   li.pos=me.pos;   
+   li.dir=li.dir+vec2(18.0*TimeFac,36*TimeFac);
+   SetLight(li);
+
+   sn.pos=me.pos;
+   SetSound(sn);  
+
+   object_move2(me,vec3(me.LocalFloats0,me.LocalFloats1,me.LocalFloats2)*200.0*TimeFac);   
+   wait 1;
+  }
+ }
+ if(Trigger==TRIGGER_COLLISION)
+ {
+  me.LocalFloats0=ReflectVec.x;
+  me.LocalFloats1=ReflectVec.y;
+  me.LocalFloats2=ReflectVec.z;
+ }
+}
+
+procedure InitFps()
+{
+ fpstxt.font=SetFont("font");
+ fpstxt.Visible=YES;
+ fpstxt.Size=vec2(20,20);
+ fpstxt.layer=3;
+ #fpstxt.pos=vec2(800,10);#
+ fpstxt.pos=vec2(10,10);
+ fpstxt.mode=TRANSPARENT; 
+ fpstxt.ColorR=0;
+ fpstxt.ColorB=0;
+}
+
+action ofunc
+{
+ me.Passable=YES;
+}
+
+action tracefunc
+{ 
+ CreateObjectPos("Sphere1",ofunc,TraceVec);
+}
+
+action AddObj
+{
+ #
+ CreateObjectPos("Sphere1",movetest,screen_to_world(vec3(ScreenX/2,ScreenY/2,100)));
+ #
+ trace(view.pos,screen_to_world(vec3(ScreenX/2,ScreenY/2,1200)),
+ TRACE_MAP | TRACE_OBJECTS | TRACE_FIRST,tracefunc);
+ #
+ CreateObjectPos("Sphere1",movetest,-1*view.pos);
+ #
+}
+
+action LampFunc
+{
+ if(Trigger==TRIGGER_CREATE)
+ {
+  var light li;
+
+  li=CreateLight();
+  li.range=400.0;
+  li.r=180;
+  li.g=180;
+  li.b=255;
+  li.dir=vec2(0,0);
+  li.spotcutoff=40.0;   
+  SetLight(li);
+
+  while(YES)
+  {
+   me.angle.y=me.angle.y+180.0*TimeFac;
+   li.dir=vec2(-20,me.angle.y);
+   li.pos=GetModelVert(me,34);   
+   
+   SetLight(li);
+   wait 1;
+  }
+ } 
+}
+
+action FanFunc
+{
+ if(Trigger==TRIGGER_CREATE)
+ {
+  me.Passable=YES;
+  while(YES)
+  {
+   me.angle.y=me.angle.y+180.0*TimeFac;
+   wait 1;
+  }
+ }
+}
+
+action LightFunc
+{
+ if(Trigger==TRIGGER_CREATE)
+ {  
+  var light li;
+  li=CreateLight();  
+  li.range=300;  
+  li.r=255;
+  li.g=255;
+  li.b=255;
+  li.spotcutoff=180.0;  
+  wait 2;
+  li.pos=GetModelVert(me,61);
+  SetLight(li);
+  me.Shadow=NO;
+  me.Lighting=NO;
+  me.Passable=YES;
+ }
+}
+
+action LampFunc2
+{
+ if(Trigger==TRIGGER_CREATE)
+ {
+  var light li;
+  var float temp;
+  var float ang;
+  var int   lensid;
+
+  li=CreateLight();
+  li.range=150.0;
+  li.r=128;
+  li.g=50;
+  li.b=50;
+  li.spotcutoff=180.0;
+  li.pos=GetModelVert(me,378);  
+  SetLight(li);
+
+  lensid=lens_create("flare1");
+  lens_color(lensid,128,50,50);
+
+  temp=8.0*Timefac;
+  ang=0.0;
+
+  while(YES)
+  {
+   li.pos=GetModelVert(me,378);   
+   lens_pos(lensid,GetModelVert(me,378));
+   SetLight(li);
+   
+   ang=ang+temp;
+   me.angle.z=sin(ang)*20.0;
+   
+   if(ang>=8)
+   {
+    temp=-4.0*TimeFac;
+   }
+
+   if(ang<=(-8))
+   {
+    temp=4.0*TimeFac;
+   }
+
+
+   wait 1;
+  }
+ } 
+}
+
+procedure ConfigFlare()
+{
+ lens_add("flare1","blens1",vec2(10,10));
+ lens_add("flare1","blens2",vec2(10,10));
+ lens_add("flare1","blens3",vec2(5,5));
+ lens_add("flare1","blens4",vec2(5,5));
+}
+
+procedure MAIN()
+{
+ SetKeyDown(KEY_F1,LoadMap1);
+ SetKeyDown(KEY_F2,LoadMap2);
+ SetKeyDown(KEY_F3,LoadMap3);
+ SetKeyDown(KEY_F4,AddObj);
+ SetCursor("cursor2");
+ cursor.Size=vec2(50,50);
+ cursor.mode=TRANSPARENT;
+ cursormode=CURSOR_FORCE;
+
+ view.pos=vec3(-60,40,-60);
+
+ ConfigFlare();
+ InitPlayer();
+ InitFps();
+
+ while(1)
+ {  
+  fpstxt.Text="Fps: "+fps;
+  wait 1;
+ }
+}
+

@@ -1,0 +1,12 @@
+//---------------------------------------------------------------------------
+#ifndef LoadJPGH
+#define LoadJPGH
+//---------------------------------------------------------------------------
+struct ENJPGDATA
+{
+ unsigned char *Data;
+ unsigned int   w,h,BPP;
+};
+
+extern bool _ENLoadJPG(ENJPGDATA *pic,char *FileName);
+#endif
