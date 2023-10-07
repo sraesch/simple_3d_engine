@@ -1,10 +1,7 @@
 //---------------------------------------------------------------------------
-#include <math.h>
-#include <float.h>
-#include <windows.h>
-#include <GL/gl.h>
-#include <GL/glu.h>
-#include "EngineSystem.h"
+#include <cmath>
+
+#include <EngineSystem/EngineSystem.h>
 
 enum ENPlaneData
 {
